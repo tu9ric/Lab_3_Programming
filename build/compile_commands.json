@@ -1,0 +1,8 @@
+[
+{
+  "directory": "C:/Users/artem/OneDrive/Desktop/Study/Programming/LAB_3/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -g -o CMakeFiles\\LAB_3.dir\\first_task.cpp.obj -c C:\\Users\\artem\\OneDrive\\Desktop\\Study\\Programming\\LAB_3\\first_task.cpp",
+  "file": "C:\\Users\\artem\\OneDrive\\Desktop\\Study\\Programming\\LAB_3\\first_task.cpp",
+  "output": "CMakeFiles\\LAB_3.dir\\first_task.cpp.obj"
+}
+]
