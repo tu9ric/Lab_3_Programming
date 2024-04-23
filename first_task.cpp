@@ -9,9 +9,9 @@
  * @param S - входная строка содержащая IP
  * @return std::string - входная строка с изменёнными символами "." на "[.]"
  */
-std::string editIP(std::string S)
+void editIP(std::string& S)
 {
-    std::string result = "";
+
     for(int i = 0; i < S.size(); i++)
     {
         if(S[i] == '.')
@@ -21,7 +21,6 @@ std::string editIP(std::string S)
             i += 1;
         }
     }
-    return S;
 }
 
 /**
@@ -69,6 +68,7 @@ int checkScore(std::vector<std::string> words, std::vector <char> letters, std::
     {
         char2[letters[i] - 'a']++;
     }
+    std::string ty;
     for (size_t i = 0; i < words.size(); ++i)
     {
         bool fl = true;
@@ -96,18 +96,24 @@ int checkScore(std::vector<std::string> words, std::vector <char> letters, std::
             a += score[word[j] - 'a'];
         }
         if (maxi < a) 
-        maxi = a;
+        {
+            maxi = a;
+            ty = word;
+        }
+        
     }
+    std::cout << ty << std::endl;
     return maxi;
 }
 
 int main(){
     //ПЕРВАЯ ЗАДАЧА
+   /*
     std::string test_one = "255.255.255.254";
     std::string test_two = "203.0.113.0";
 
-    std::string result = editIP(test_one);
-    std::cout << result;
+    editIP(test_one);
+    std::cout << test_one;
     
     //ВТОРАЯ ЗАДАЧА
     std::string S;
@@ -116,11 +122,14 @@ int main(){
     bool res = isPalindrome(S);
     std::cout << res;
     
+    */
+    
+    
     //ТРЕТЬЯ ЗАДАЧА
     std::vector<std::string> words = {"cat", "dog", "pen", "fog"};
     std::vector<char> letters = {'a', 'c', 't', 'o', 'g', 'p', 'e', 'n', 'f'};
-    std::vector<int> score = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25};
+    std::vector<int> score = {25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,6,5,4,3,2,1,0};
     std::cout << "Самое большое количество очков: " << checkScore(words, letters, score);
-
+    
     return 0;
 }
